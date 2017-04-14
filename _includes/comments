@@ -1,0 +1,3 @@
+{% include disqus_comments.html %}
+{% include youyan_comments.html %}
+{% include changyan_comments.html %}

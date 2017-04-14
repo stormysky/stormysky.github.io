@@ -1,8 +1,7 @@
 title:            十九般武艺
 description:      Qingyu's Blog
-disqus_shortname: 
 reading_time:     true
-words_per_minute: 200
+words_per_minute: 100
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 url: 
@@ -87,3 +86,12 @@ exclude:
   - package.json
   - spec
   - tmp
+
+disqus_shortname: 
+
+changyan:
+  appid: 
+  appkey: 
+
+youyan:
+  uid: 2130786
