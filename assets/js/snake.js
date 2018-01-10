@@ -28,6 +28,7 @@ var Snake = function(){
 	//touch info
 	this.Tx = 0;
 	this.Ty = 0;
+	this.touchLength = 35;
 
 };
 
@@ -230,17 +231,17 @@ window.addEventListener(
 snake.canvas.addEventListener(
 	"touchstart",
 	function(event){
+		event.preventDefault();
 		var touch = event.targetTouches[0];
 		snake.Tx = touch.pageX;
 		snake.Ty = touch.pageY;
-		console.log("touchstart");
 	}
 );
 
 snake.canvas.addEventListener(
 	"touchend",
 	function(event){
-		console.log(event);
+		event.preventDefault();
 		var x = snake.Tx;
 		var y = snake.Ty;
 
@@ -253,9 +254,7 @@ snake.canvas.addEventListener(
 		var neighbor = x1 - x;
 		var radius = Math.abs(Math.asin(opposite/r)/Math.PI*180);
 
-		console.log(radius);
-
-		if(r > 50){
+		if(r > snake.touchLength){
 			//left:3 up:2 right:1 down:0
 			if(opposite > 0 && neighbor > 0){
 				snake.DefaultDirection = radius > 45 ? 0 : 1;
@@ -273,7 +272,6 @@ snake.canvas.addEventListener(
 		else{
 			return false;
 		}
-		console.log("touchend");
 	}
 );
 

@@ -8,7 +8,7 @@ body{
 	/*background-color: gray;*/
 }
 .data{
-	width: 410px;
+	width: 310px;
 	height: 70px;
 	margin: auto;
 }
@@ -20,7 +20,7 @@ body{
 .only{
 	position: relative;
 	min-width: 300px;
-	min-height: 400px;
+	min-height: 300px;
 	margin: auto;
 }
 .only canvas,.data{
@@ -35,8 +35,8 @@ canvas{
 .container{
 	position: relative;
 	margin: auto;
-	width: 410px;
-	height: 410px;
+	width: 310px;
+	height: 310px;
 }
 #controlText{
 	position: absolute;

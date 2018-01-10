@@ -2,7 +2,7 @@
 layout: post
 title: snaker
 description: "A Ez HTML game"
-modified: 2018-01-08
+modified: 2018-01-10
 tags: [canvas, js, snake]
 comments: false
 image:
@@ -27,7 +27,7 @@ image:
 	</div>
 	<div class="container">
 		<div id = "controlText">pause</div>
-		<canvas id = "drawenv" width="400" height="400">
+		<canvas id = "drawenv" width="300" height="300">
 			your broswer didn't surport canvas
 		</canvas>
 	</div>
