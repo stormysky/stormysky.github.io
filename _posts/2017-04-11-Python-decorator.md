@@ -4,7 +4,7 @@ title: Python装饰器
 description: "Python装饰器用法"
 modified: 2017-04-11
 tags: [Python]
-comments: true
+comments: false
 image:
   feature: python-logo.png
   credit: 

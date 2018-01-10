@@ -2,8 +2,9 @@
 layout: post
 title: 使用Jekyll搭建博客
 description: "Jekyll可以将纯文本转化为静态网站和博客"
-modified: 2017-04-06
+modified: 2018-01-01
 tags: [Jekyll]
+comments: false
 image:
   feature: 
   credit: 

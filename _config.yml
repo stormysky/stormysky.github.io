@@ -1,4 +1,4 @@
-title:            十九般武艺
+title:            偷得浮生半日闲
 description:      Qingyu's Blog
 reading_time:     true
 words_per_minute: 100
@@ -13,7 +13,7 @@ owner:
   bio:            "书写追逐太阳的旅途 Writing the journey of chasing the sun"
   email:          j526249313@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
+  twitter:
   facebook:       
   github: stormysky        
   stackexchange:  
@@ -94,7 +94,7 @@ changyan:
   appkey: 
 
 youyan:
-  uid: 2130786
+  uid: 
 
 # source
 source: .

@@ -1,0 +1,61 @@
+body{
+	/*position: relative;*/
+	/*text-align: center;*/
+/*	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;*/
+	/*background-color: gray;*/
+}
+.data{
+	width: 410px;
+	height: 70px;
+	margin: auto;
+}
+.data p{
+	float: left;
+	margin: 0px 0px 0px 5px;
+	display: inline-block;
+}
+.only{
+	position: relative;
+	min-width: 300px;
+	min-height: 400px;
+	margin: auto;
+}
+.only canvas,.data{
+	border: 5px outset silver;
+}
+canvas{
+	margin: auto;
+}
+#scores{
+	margin: 3px 0px 0px 10px;
+}
+.container{
+	position: relative;
+	margin: auto;
+	width: 410px;
+	height: 410px;
+}
+#controlText{
+	position: absolute;
+	margin-left: -63px;
+	opacity: 0.5;
+	z-index: 1;
+	left:50%;
+	top: 40%;
+	transition: opacity 2s;
+}
+#control{
+	width: 54px;
+	height: 54px;
+	float: right;
+	margin-top: 5px;
+}
+.data p, #controlText{
+	line-height: 50px;
+	font: 50px fantasy;
+	color: #333333;
+	text-shadow: 2px 2px 4px #AAA;
+}
