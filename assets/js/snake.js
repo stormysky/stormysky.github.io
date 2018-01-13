@@ -6,7 +6,7 @@ var Snake = function(){
 	this.scores = document.getElementById("scores");
 	this.control = document.getElementById("control");
 	this.controlText =  document.getElementById("controlText");
-	// console.log(this.control);
+	this.container = document.getElementById("container");
 
 	//snake prop
 	this.radius = 7;
@@ -162,6 +162,8 @@ Snake.prototype = {
 	},
 
 	dataInit: function(){
+		this.canvas.width = this.container.offsetWidth;
+		this.canvas.height = this.container.offsetHeight;
 		this.startX = this.radius;
 		this.startY = this.radius;
 		this.snakeArray = [];
@@ -170,6 +172,8 @@ Snake.prototype = {
 		this.DefaultDirection = 1;
 		this.key = 0;//按键值
 		this.ActID = 0;
+		this.scores.innerHTML = 0;
+		this.controlText.style.opacity = 0.5;
 		this.control.style.background = "url('../images/start.png') no-repeat";
 	},
 
@@ -213,6 +217,15 @@ Snake.prototype = {
 			this.ActID = setInterval(function(){
 				this.Act(this.key)
 			}.bind(this),snake.speed);
+	},
+
+	resize: function(){
+		var OW = this.canvas.width;
+		this.canvas.width = this.container.offsetWidth;
+		this.canvas.height = this.container.offsetHeight;
+		this.candy.x = this.candy.x *  this.canvas.width / OW;
+		this.drawSnake();
+		this.drawCandy();
 	}
 };
 
@@ -256,17 +269,18 @@ snake.canvas.addEventListener(
 
 		if(r > snake.touchLength){
 			//left:3 up:2 right:1 down:0
+			//left:37 up:38 right:39 down:40
 			if(opposite > 0 && neighbor > 0){
-				snake.DefaultDirection = radius > 45 ? 0 : 1;
+				snake.key = radius > 45 ? 40 : 39;
 			}
 			if(opposite < 0 && neighbor < 0){
-				snake.DefaultDirection = radius > 45 ? 2 : 3;
+				snake.key = radius > 45 ? 38 : 37;
 			}
 			if(opposite > 0 && neighbor < 0){
-				snake.DefaultDirection = radius > 45 ? 0 : 3;
+				snake.key = radius > 45 ? 40 : 37;
 			}
 			if(opposite < 0 && neighbor > 0){
-				snake.DefaultDirection = radius > 45 ? 2 : 1;
+				snake.key = radius > 45 ? 38 : 39;
 			}
 		}
 		else{
@@ -279,7 +293,6 @@ snake.control.addEventListener(
 	"mousedown",
 	function(event){
 		console.log("down");
-		var tips = snake.controlText.innerHTML;
 		if(snake.controlText.style.opacity != "0"){
 			snake.control.style.background = "url('../images/starton.png') no-repeat";
 			snake.controlText.style.opacity = "0";
@@ -308,6 +321,14 @@ snake.control.addEventListener(
 
 	}
 );
+
+window.addEventListener(
+	"resize",
+	function(event){
+		snake.resize();
+	}
+)
+
 
 snake.dataInit();
 snake.snakeInit();
