@@ -2,7 +2,7 @@
 layout: post
 title: snaker
 description: "A Ez HTML game"
-modified: 2018-01-10
+modified: 2018-01-20
 tags: [canvas, js, snake]
 comments: false
 image:
@@ -43,3 +43,7 @@ image:
  **版本v1.1**    - 2018-01-13
 
 修改部分bug，增加游戏放大缩小操作
+
+ **版本v1.1**    - 2018-01-20
+
+修复暂停游戏也能操作方向

@@ -1,3 +1,4 @@
+(function(){
 var Snake = function(){
 
 	this.canvas = document.getElementById("drawenv");
@@ -198,7 +199,6 @@ Snake.prototype = {
 			if(Math.abs(40 - key - this.DefaultDirection) != 2)
 				this.DefaultDirection = 40 - key;
 		}
-		// console.log(key);
 		this.snakeMove(this.DefaultDirection);
 		this.drawSnake(true);
 		if(!this.iscandy){
@@ -211,12 +211,14 @@ Snake.prototype = {
 
 	Pause: function(){
 		clearInterval(this.ActID);
+		this.DefaultDirection = 40 - this.key;	//存储最后方向
 	},
 
 	Start: function(){
-			this.ActID = setInterval(function(){
-				this.Act(this.key)
-			}.bind(this),snake.speed);
+		this.key = 40 - this.DefaultDirection; //使用默认方向
+		this.ActID = setInterval(function(){
+			this.Act(this.key)
+		}.bind(this),snake.speed);
 	},
 
 	resize: function(){
@@ -238,23 +240,27 @@ window.addEventListener(
 		if(event.keyCode >= 37 && event.keyCode <= 40){
 			event.preventDefault();
 		}
-	}
+	},
+	false
 );
 
 snake.canvas.addEventListener(
 	"touchstart",
 	function(event){
 		event.preventDefault();
+		event.stopPropagation();	//防止事件冒泡
 		var touch = event.targetTouches[0];
 		snake.Tx = touch.pageX;
 		snake.Ty = touch.pageY;
-	}
+	},
+	false
 );
 
 snake.canvas.addEventListener(
 	"touchend",
 	function(event){
 		event.preventDefault();
+		event.stopPropagation();	//防止事件冒泡
 		var x = snake.Tx;
 		var y = snake.Ty;
 
@@ -268,8 +274,8 @@ snake.canvas.addEventListener(
 		var radius = Math.abs(Math.asin(opposite/r)/Math.PI*180);
 
 		if(r > snake.touchLength){
-			//left:3 up:2 right:1 down:0
-			//left:37 up:38 right:39 down:40
+			//defaultdirection: left:3 up:2 right:1 down:0
+			//key: left:37 up:38 right:39 down:40
 			if(opposite > 0 && neighbor > 0){
 				snake.key = radius > 45 ? 40 : 39;
 			}
@@ -286,7 +292,8 @@ snake.canvas.addEventListener(
 		else{
 			return false;
 		}
-	}
+	},
+	false
 );
 
 snake.control.addEventListener(
@@ -303,8 +310,8 @@ snake.control.addEventListener(
 			snake.controlText.style.opacity = "0.5";
 			snake.Pause();
 		}
-
-	}
+	},
+	false
 );
 
 snake.control.addEventListener(
@@ -318,18 +325,20 @@ snake.control.addEventListener(
 		else{
 			snake.control.style.background = "url('../images/start.png') no-repeat";
 		}
-
-	}
+	},
+	false
 );
 
 window.addEventListener(
 	"resize",
 	function(event){
 		snake.resize();
-	}
+	},
+	false
 )
 
 
 snake.dataInit();
 snake.snakeInit();
 snake.createCandy();
+}());
