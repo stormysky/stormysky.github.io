@@ -7,7 +7,7 @@
 {% include head.html %}
 </head>
 
-<body id="page" {% if page.image.feature %}class="feature"{% endif %}>
+<body id="special" {% if page.image.feature %}class="feature"{% endif %}>
 
 {% include browser-upgrade.html %}
 {% include navigation.html %}
@@ -34,15 +34,7 @@
         {% endif %}
       </div><!-- /.header-title-wrap -->
     </header>
-    <div class="entry-content">
       {{ content }}
-      <footer class="entry-meta">
-        {% if page.modified %}<span>Updated on <span class="entry-date date published updated"><time datetime="{{ page.modified }}">{{ page.modified | date: "%B %d, %Y" }}</time></span></span>
-        <span class="author vcard"><span class="fn">{{ site.owner.name }}</span></span>{% endif %}
-        {% if page.share != false %}{% include social-share.html %}{% endif %}
-      </footer>
-    </div><!-- /.entry-content -->
-    <section id="comments_thread"></section><!-- /#comments_thread -->
     {% if page.comments != false %}<section id="comments_thread">{% include comments %}</section><!-- /#comments_thread -->{% endif %}
   </article>
 </div><!-- /#main -->

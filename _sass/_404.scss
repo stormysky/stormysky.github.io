@@ -1,0 +1,53 @@
+#aconsole,.mui{
+	margin: 0;
+	padding: 0;
+	color: #EAEAEA;
+	height: 100%;
+	width: 100%;
+	text-align: left;
+}
+
+#fir{
+	background-color:#000;
+	overflow: hidden;
+}
+.con{
+	height: calc( 100% - 100px );
+	margin: 50px;
+	border: 5px solid silver;
+	border-radius: 15px;
+	text-align: center;
+}
+.tools{
+	overflow:hidden;
+	border-bottom: 5px solid silver;
+}
+.tools > span{
+	float: left;
+	font-size: 40px;
+	margin-left: 5px;
+	font-weight: bold;
+}
+#consoleText{
+	margin-top: 10px 0px 0px 5px;
+	font-size: 40px;
+	font-weight: bold;
+	height: 500px;
+}
+#exit{
+	float: right;
+	width: 60px;
+	height: 100%;
+	background-color: #CD4F39;
+	border-top-right-radius: 10px;
+}
+.icon{
+	font: normal normal normal 40px FontAwesome;
+}
+#cursor{
+	animation: blink 1s infinite linear;
+}
+@keyframes blink{
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
