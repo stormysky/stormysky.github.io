@@ -1,0 +1,14 @@
+<div class="nav">
+<nav>
+	<div class="bn-nav">
+		<i class="nav-ico"></i>
+	</div>
+	<ul class = "list-nav">
+		{% for post in paginator.posts %}
+		<li class = "list-navson">
+			<a href="#{{ post.title }}">{{post.title}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</nav>
+</div>
