@@ -1,21 +1,23 @@
+.nav{
+	position: fixed;
+	width: 245px;
+	top: 50%;
+	left: calc( 100% - 245px );
+	/*border: 3px black solid;*/
+	z-index: 1000;
+}
 .bn-nav{
 	width: 45px;
 	height: 45px;
 	float: right;
 	background-color: black;
-	/*border-radius: 15px;*/
-	transform: rotate(45deg) translateX(31px);
+	border-radius: 15px;
+	/*transform: rotate(45deg) translateX(31px);*/
+	transition: opacity 1s ease;
 	opacity: 0.3;
 }
 .bn-nav:hover{
-	animation: act 1s ease;
-}
-.nav{
-	position: fixed;
-	top: 50%;
-	right: 0px;
-	/*border: 3px black solid;*/
-	z-index: 1000;
+	opacity: 0.8;
 }
 .list-nav{
 	position: relative;
@@ -38,12 +40,4 @@
 }
 .list-navson a{
 	color: white;
-}
-@keyframes act{
-/*	0% {transform: scale(1) rotate(45deg);}
-	50% {transform: scale(1.5) rotate(360deg);}
-	100% {transform: scale(1) rotate(45deg);}*/
-	0% {opacity: 0.3;}
-	100% {opacity: 0.8;}
-
 }
