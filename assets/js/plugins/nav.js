@@ -27,9 +27,4 @@
 
 	$(".bn-nav").bind("click",sh);
 	$(".bn-nav").bind("mousedown",down);
-
-
-
-
-
 }());
