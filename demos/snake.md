@@ -33,7 +33,7 @@ image:
 		</div>
 	</div>
 </div>
-<script src="{{ site.url }}/assets/js/snake.js"></script>
+<script src="{{ site.url }}/assets/js/demo/snake.js"></script>
 
 
  **版本v1.0**    - 2018-01-08

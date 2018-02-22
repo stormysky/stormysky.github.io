@@ -34,8 +34,9 @@ var Snake = function(){
 };
 
 Snake.prototype = {
-	drawCircle: function(centerX, centerY, size, color, isclear = false){
-		if(isclear)
+	drawCircle: function(centerX, centerY, size, color, isClear){
+		isClear = isClear || false;
+		if(isClear)
 			this.context.clearRect(0,0,this.canvas.width,this.canvas.height);
 	
 		this.context.beginPath();
@@ -175,7 +176,7 @@ Snake.prototype = {
 		this.ActID = 0;
 		this.scores.innerHTML = 0;
 		this.controlText.style.opacity = 0.5;
-		this.control.style.background = "url('../images/start.png') no-repeat";
+		this.control.style.background = "url('../../images/start.png') no-repeat";
 	},
 
 	Act: function(key){
@@ -301,12 +302,12 @@ snake.control.addEventListener(
 	function(event){
 		console.log("down");
 		if(snake.controlText.style.opacity != "0"){
-			snake.control.style.background = "url('../images/starton.png') no-repeat";
+			snake.control.style.background = "url('../../images/starton.png') no-repeat";
 			snake.controlText.style.opacity = "0";
 			snake.Start();
 		}
 		else{
-			snake.control.style.background = "url('../images/pauseon.png') no-repeat";
+			snake.control.style.background = "url('../../images/pauseon.png') no-repeat";
 			snake.controlText.style.opacity = "0.5";
 			snake.Pause();
 		}
@@ -320,10 +321,10 @@ snake.control.addEventListener(
 		console.log("up");
 		var tips = snake.controlText.innerHTML;
 		if(snake.controlText.style.opacity == "0"){
-			snake.control.style.background = "url('../images/pause.png') no-repeat";
+			snake.control.style.background = "url('../../images/pause.png') no-repeat";
 		}
 		else{
-			snake.control.style.background = "url('../images/start.png') no-repeat";
+			snake.control.style.background = "url('../../images/start.png') no-repeat";
 		}
 	},
 	false
