@@ -1,12 +1,12 @@
 ---
 layout: post
-title: snaker
+title: Snaker
 description: "A Ez HTML game"
 modified: 2018-01-20
 tags: [canvas, js, snake]
 comments: false
 image:
-  feature: 
+  feature: abstract-10.jpg
   credit: 
   creditlink: 
 ---
