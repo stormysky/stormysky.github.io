@@ -63,6 +63,8 @@ image:
 </div>
 <script src="{{ site.url }}/assets/js/demo/calc.js"></script>
 
+[项目地址](https://github.com/stormysky/Chrome-Caculator)
+
  **版本v1.0**    - 2017-12-15
 
  初始版本

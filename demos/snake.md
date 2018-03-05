@@ -35,6 +35,8 @@ image:
 </div>
 <script src="{{ site.url }}/assets/js/demo/snake.js"></script>
 
+[项目地址](https://github.com/stormysky/snaker)
+
 
  **版本v1.0**    - 2018-01-08
 
