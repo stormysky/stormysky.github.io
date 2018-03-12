@@ -5,6 +5,6 @@
 
 - 修改部分功能
 
-![demo](./demo.png)
+![demo](./images/demo.png)
 
 
