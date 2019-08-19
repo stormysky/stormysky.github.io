@@ -1,5 +1,5 @@
 (function(){
-	var o = false,du=false;
+	var o = false;
 	var t=0,l=0;
 	function sh(){
 		var s = $(".list-nav");
@@ -8,12 +8,12 @@
 	function down(e){
 		l = e.offsetX;
 		t = e.offsetY;
-		$(window).bind("selectstart",function(){return false;})
-		$(window).bind("mouseover",mv);
-		$(window).bind("mouseup",function(){
-			$(window).unbind("mouseover");
-			$(window).unbind("selectstart");
-			$(window).unbind("mouseup");
+		$(document).bind("selectstart",function(){return false;})
+		$(document).bind("mousemove", mv);
+		$(document).bind("mouseup",function(){
+			$(document).unbind("mousemove");
+			$(document).unbind("selectstart");
+			$(document).unbind("mouseup");
 		});
 	}
 	function mv(e){
