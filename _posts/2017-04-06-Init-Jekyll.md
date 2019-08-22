@@ -17,7 +17,7 @@ image:
 > **Jekyll** 可以简单的生成静态博客站点。它有一个模版目录，其中包含原始文本格式的文档，通过 **Markdown** （或者 Textile） 以及 **Liquid** 转化成一个完整的可发布的静态网站。**Jekyll** 也可以运行在 **GitHub** 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站。
 
 ## 2.准备工作 ##
- - [Ruby download](http://www.ruby-lang.org/en/downloads/)(建议下载2.2版本以上，防止依赖包报错)
+ - [Ruby download](https://www.ruby-lang.org/en/downloads/)(建议下载2.2版本以上，防止依赖包报错)
  - [RubyGem download](https://rubygems.org/pages/download/)
  
 下载安装之后，终端输入，即可安装Jeyll：
@@ -89,7 +89,7 @@ image:
 
 首先准备好数字证书cert.pem, 下载地址：
 
-	http://curl.haxx.se/ca/cacert.pem
+	https://curl.haxx.se/ca/cacert.pem
 
 #### Linux
 	export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
@@ -99,4 +99,4 @@ image:
 	set SSL_CERT_FILE=xxxxxx\cacert.pem
 
 
-[refer to Stackoverflow](http://stackoverflow.com/questions/4528101/ssl-connect-returned-1-errno-0-state-sslv3-read-server-certificate-b-certificat)
+[refer to Stackoverflow](https://stackoverflow.com/questions/4528101/ssl-connect-returned-1-errno-0-state-sslv3-read-server-certificate-b-certificat)

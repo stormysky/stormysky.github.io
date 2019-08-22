@@ -29,7 +29,7 @@ Try:
 
 ## Part2 浮点数误差
 
-*javascript*采用[IEEE-754](http://ieeexplore.ieee.org/document/4610935/),是一种二进制表示法
+*javascript*采用[IEEE-754](https://ieeexplore.ieee.org/document/4610935/),是一种二进制表示法
 ，所以表示十进制的时候会有误差...
 
 Try:

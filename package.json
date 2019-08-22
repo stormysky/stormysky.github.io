@@ -1,7 +1,7 @@
 {
   "name": "hpstr-theme",
   "author": "Michael Rose <michael@mademistakes.com>",
-  "homepage": "http://mmistakes.github.io/hpstr-jekyll-theme/",
+  "homepage": "https://mmistakes.github.io/hpstr-jekyll-theme/",
   "repository": {
     "type": "git",
     "url": "git://github.com/mmistakes/hpstr-jekyll-theme.git"
