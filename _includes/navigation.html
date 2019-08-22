@@ -39,7 +39,7 @@
 					<a href="https://www.flickr.com/photos/{{ site.owner.flickr }}"><i class="fa fa-fw fa-flickr"></i> Flickr</a>
 				</li>{% endif %}
 				{% if site.owner.tumblr %}<li>
-					<a href="http://{{ site.owner.tumblr }}.tumblr.com"><i class="fa fa-fw fa-tumblr"></i> Tumblr</a>
+					<a href="https://{{ site.owner.tumblr }}.tumblr.com"><i class="fa fa-fw fa-tumblr"></i> Tumblr</a>
 				</li>{% endif %}
 			</ul><!-- /.dl-submenu -->
 		</li>
@@ -64,7 +64,7 @@
 	        {% else %}
 	        {% assign domain = site.url %}
 	    {% endif %}
-	    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+	    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'https' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
 	  {% endfor %}
 	</ul><!-- /.dl-menu -->
 </nav><!-- /.dl-menuwrapper -->
