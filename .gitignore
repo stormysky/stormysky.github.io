@@ -7,3 +7,6 @@ node_modules
 Gemfile.lock
 .sass-cache
 .jekyll-metadata
+/_site/
+/build/
+/.jekyll-cache/

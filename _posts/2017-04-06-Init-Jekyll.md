@@ -2,7 +2,7 @@
 layout: post
 title: 使用Jekyll搭建博客
 description: "Jekyll可以将纯文本转化为静态网站和博客"
-modified: 2018-01-01
+modified: 2020-01-10
 tags: [Jekyll]
 comments: false
 image:
@@ -24,7 +24,7 @@ image:
 
 	gem install jekyll
 
-> (官方文档并不建议你在 **Windows** 平台上安装 **Jekyll**, 但是不妨碍安装使用。)
+> (官方文档并不建议你在 **Windows** 平台上安装 **Jekyll**, 但是不妨碍安装使用。)，windows可以在wsl2中使用。
 
 
 ## 3.使用Jekyll ##
@@ -77,13 +77,22 @@ image:
 
 1.安装Timezone:
 
-	应该输入:gem install tzinfo-data timezone
+	gem install tzinfo
+	gem install tzinfo-data
+	同时应该向Gemfile添加 gem 'tzinfo-data'
+
 	以免出现“No source of timezone data could be found. ”
 
 2.ssl证书问题
 
 	出现问题描述大致如下：
 	SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed
+
+3.提示”servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)“
+
+	需要安装webrick
+	bundle add webrick
+
 
 **解决方法：**
 
