@@ -20,7 +20,7 @@
     "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-svgmin": "^5.0.0",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "websocket-extensions": ">=0.1.4",
     "kind-of": ">=6.0.3"
   }
